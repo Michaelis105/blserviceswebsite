@@ -4,20 +4,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Legal Assistance and Tax Services"/>
-    <link rel="stylesheet"
-          href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.10/angular-material.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.10/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-    <link rel="stylesheet" href="css/vulquery.css">
-    <title>B&L Services LLC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/blservices.css">
+    <title>Home - B&L Services LLC</title>
 </head>
-<body>
+<body ng-app="app" class="container">
+
+<!-- Nav bar -->
+<md-toolbar class="md-menu-toolbar">
+    <div layout="row">
+        <md-menu-bar>
+            <md-button href="/" aria-label="Home">Home</md-button>
+            <md-button href="/about" aria-label="About">About Us</md-button>
+            <md-menu>
+                <md-button ng-mouseover="$mdMenu.open()" href="/services" aria-label="Services">Services</md-button>
+                <md-menu-content>
+                    <md-menu-item>
+                        <md-button href="/services" aria-label="Legal Assistance">Legal Assistance</md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button href="/services" aria-label="Tax Fillings">Tax Fillings</md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-button href="/contact" aria-label="Contact Us">Contact Us</md-button>
+        </md-menu-bar>
+    </div>
+</md-toolbar>
+
+<div ng-controller="DemoBasicCtrl as ctrl" ng-cloak>
+
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-aria.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-messages.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.10/angular-material.min.js"></script>
 <script src="js/blservices.js"></script>
 </body>
 </html>

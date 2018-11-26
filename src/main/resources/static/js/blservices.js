@@ -1,11 +1,7 @@
-angular.module('BlankApp', ['ngMaterial', 'ngMessages', 'ngMdIcons'])
-.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.close = function () {
-      // Component lookup should always be available since we are not using `ng-if`
-      $mdSidenav('left').close()
-        .then(function () {
-          $log.debug("close LEFT is done");
-        });
-
-    };
-});
+angular.module('app', ['ngMaterial'])
+    .controller('DemoBasicCtrl', function($scope) {})
+    .config(function($mdIconProvider) {
+        $mdIconProvider
+            .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
+            .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+    });
